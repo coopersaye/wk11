@@ -19,17 +19,19 @@ document.querySelector("#pause").addEventListener("click", function() {
 
 document.querySelector("#slower").addEventListener("click", function() {
   console.log("In slower")
-  video.playbackRate = video.playbackRate * 0.5;
+  video.playbackRate = video.playbackRate * 0.9;
+  console.log(video.playbackRate)
 })
 
 document.querySelector("#faster").addEventListener("click", function() {
   console.log("In faster")
-  video.playbackRate = video.playbackRate * 2;
+  video.playbackRate = video.playbackRate * (1 / 0.9);
+  console.log(video.playbackRate)
 })
 
 document.querySelector("#skip").addEventListener("click", function() {
   console.log("In skip")
-  video.currentTime = video.currentTime + 15;
+  video.currentTime = video.currentTime + 10;
   video.loop = true;
 })
 
